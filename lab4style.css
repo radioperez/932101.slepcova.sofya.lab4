@@ -4,8 +4,23 @@ html,body {
 	margin: 0px;
 	padding: 0px;
 }
+
+::-moz-selection { /* Code for Firefox */
+  color: green;
+  background: #E0E4EA;
+}
+
+::selection {
+  color: green;
+  background: #E0E4EA;
+}
+
 header {
 	background-color: #507299;
+}
+header img {
+	padding-top: 5px;
+	padding-left: 200px;
 }
 
 /*Середина страницы где лежат столбцы*/
@@ -18,6 +33,7 @@ header {
 /*Касается ВСЕХ СТОЛБЦОВ*/
 .col {
 	float: left;
+	margin-top: 0px;
 }
 /*только левый*/
 .col.left {
@@ -28,7 +44,7 @@ header {
 	color: #507299;
 	text-decoration: none;
 	display: block;
-	margin: 20px;
+	margin: 0px 20px 20px 20px;
 }
 
 /*только средний*/
@@ -45,23 +61,32 @@ header {
 }
 
 .col.right p {
-	background-color: #d0d0d0;
+	background-color: #edeef0;
 }
 /*ВСЕХ ПОСТОВ*/
 .post {
 	background-color: white;
-	padding: 20px;
+	padding: 10px 20px 20px 20px;
 	margin-bottom: 20px;
-	border-radius: 2%;
+	border-radius: 4%;
+	box-shadow: -1px -1px 2px #d0d0d0, 1px 1px 2px #d0d0d0;
 }
 .post img {
 	height: 100%;
 	width: 100%;
+	margin-top: 10px;
 }
 
-hr {
-	border: 2px solid #d0d0d0;
-	margin: 20px;
+.hr1 {
+	margin: 0px -20px 0px -20px;
+	border: 1px solid #d0d0d0;
+}
+
+.hr2 {
+	border: 1px solid #d0d0d0;
+}
+h4 {
+	margin: 10px 5px 5px 5px;
 }
 
 .like {
@@ -90,4 +115,34 @@ footer {
 	color: #808080;
 	background-color: white;
 	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	header img {
+		padding-left: 100px;
+	}
+	.row {
+		width: 80%;
+	}
+	.col.left {
+		float: none;
+		width: 100%;
+	}
+	.col.left a {
+		float: left;
+	}
+	.col.left::after {
+	content: "";
+	display: table;
+	clear: both;
+	}
+	.col.mid {
+		float: none;
+		width: 100%;
+	}
+	.col.right {
+		float: none;
+		width: 100%;
+	}
+	
 }
