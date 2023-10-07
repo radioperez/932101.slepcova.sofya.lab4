@@ -1,0 +1,47 @@
+html,body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+header {
+}
+
+/*Середина страницы где лежат столбцы*/
+.row {
+	margin: auto;
+	width: 60%;
+}
+
+/*Касается ВСЕХ СТОЛБЦОВ*/
+.col {
+	float: left;
+}
+/*только левый*/
+.col.left {
+	width: 20%;
+}
+
+.col.left a {
+	display: block;
+}
+
+/*только средний*/
+.col.mid {
+	color: red;
+	width: 30%;
+}
+
+/*только правый*/
+.col.right {
+	color: green;
+	width: 10%;
+}
+
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+footer {
+}
