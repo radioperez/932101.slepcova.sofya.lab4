@@ -22,25 +22,45 @@ header {
 }
 
 .col.left a {
+	color: #507299;
 	display: block;
+	margin: 20px;
 }
 
 /*только средний*/
 .col.mid {
 	color: red;
-	width: 30%;
+	width: 50%;
 }
 
 /*только правый*/
 .col.right {
+	float: right;
 	color: green;
-	width: 10%;
+	width: 15%;
+}
+/*ВСЕХ ПОСТОВ*/
+.post {
+	background-color: #edeef0;
+}
+.like {
+	color: #507299;
+	float: left;
+}
+.comment {
+	color: #507299;
+	float: right;
+}
+.post::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .row::after {
-  content: "";
-  display: table;
-  clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 
 footer {
